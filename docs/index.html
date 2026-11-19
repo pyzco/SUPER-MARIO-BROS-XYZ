@@ -23,8 +23,7 @@
       </button>
       <ul class="navbar__links" id="navLinks">
         <li><a href="#inicio">~/inicio</a></li>
-        <li><a href="#acceso-rapido">~/acceso-rapido</a></li>
-        <li><a href="#demo">~/demo</a></li>
+        <li><a href="#acceso-rapido">~/recursos</a></li>
       </ul>
     </div>
   </nav>
@@ -48,13 +47,10 @@
       </p>
       <div class="hero__actions">
         <a href="#acceso-rapido" class="btn btn--primary">
-          <span class="btn__icon">⚡</span> Acceso Rápido
-        </a>
-        <a href="#demo" class="btn btn--secondary">
-          <span class="btn__icon">▶</span> Ver Demo
+          <span class="btn__icon">⚡</span> Recursos de Sustentación
         </a>
         <a id="heroGithubBtn" href="#" target="_blank" rel="noopener" class="btn btn--outline">
-          <span class="btn__icon">⌂</span> GitHub
+          <span class="btn__icon">⌂</span> Ver en GitHub
         </a>
       </div>
       <div class="hero__terminal">
@@ -78,7 +74,7 @@
       <div class="section__header">
         <span class="section__tag">// recursos de sustentación</span>
         <h2 class="section__title">Panel de Acceso Rápido</h2>
-        <p class="section__desc">5 accesos directos diseñados para abrir recursos instantáneamente durante la exposición en vivo.</p>
+        <p class="section__desc">4 recursos clave diseñados para abrir instantáneamente durante la sustentación técnica.</p>
       </div>
 
       <div class="cards-grid">
@@ -152,66 +148,6 @@
           </div>
         </div>
 
-        <!-- TARJETA 5 — DEMO -->
-        <div class="card card--demo">
-          <div class="card__header">
-            <span class="card__number">05</span>
-            <span class="card__icon">🎮</span>
-          </div>
-          <h3 class="card__title">Demo del Juego en Consola</h3>
-          <p class="card__desc">Simulación interactiva del motor de renderizado ANSI. ¡Jugable directamente en el navegador!</p>
-          <div class="card__actions">
-            <a href="#demo" class="btn btn--primary btn--sm">▶ Jugar Demo</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════ DEMO ═══════════════════════════════════════ -->
-  <section class="section" id="demo">
-    <div class="section__container">
-      <div class="section__header">
-        <span class="section__tag">// simulación interactiva</span>
-        <h2 class="section__title">Demo — Consola Web</h2>
-        <p class="section__desc">Réplica del renderizado ANSI de <code>matrizMundo</code>. Usa <kbd>A</kbd>/<kbd>D</kbd> para mover y <kbd>W</kbd>/<kbd>Espacio</kbd> para saltar.</p>
-      </div>
-
-      <div class="demo-wrapper">
-        <div class="demo-terminal">
-          <div class="demo-terminal__bar">
-            <span class="hero__terminal-dot hero__terminal-dot--red"></span>
-            <span class="hero__terminal-dot hero__terminal-dot--yellow"></span>
-            <span class="hero__terminal-dot hero__terminal-dot--green"></span>
-            <span class="demo-terminal__title">super-mario-xyz — Nivel 1-1</span>
-            <div class="demo-terminal__stats">
-              <span id="demoLives">♥ 3</span>
-              <span id="demoScore">★ 0</span>
-            </div>
-          </div>
-          <canvas id="gameCanvas" width="640" height="320"></canvas>
-          <div class="demo-controls">
-            <div class="demo-controls__keys">
-              <button class="demo-key" data-key="w">W</button>
-              <div class="demo-controls__row">
-                <button class="demo-key" data-key="a">A</button>
-                <button class="demo-key" data-key="s">S</button>
-                <button class="demo-key" data-key="d">D</button>
-              </div>
-            </div>
-            <div class="demo-controls__info">
-              <p><kbd>A</kbd> / <kbd>D</kbd> — Mover</p>
-              <p><kbd>W</kbd> / <kbd>Espacio</kbd> — Saltar</p>
-              <p><kbd>R</kbd> — Reiniciar</p>
-            </div>
-            <button class="btn btn--primary btn--sm" id="btnResetGame">↻ Reiniciar Nivel</button>
-          </div>
-        </div>
-
-        <div class="demo-video__actions" style="margin-top: 20px;">
-          <a id="cardDownloadCode" href="#" target="_blank" rel="noopener" class="btn btn--outline btn--sm">📥 Descargar Código Fuente</a>
-        </div>
       </div>
     </div>
   </section>
