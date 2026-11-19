@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Super Mario Bros XYZ — Programación II | UTEC</title>
+  <meta name="description" content="Motor de videojuegos en consola desarrollado en C++ con POO, polimorfismo y renderizado ANSI. Proyecto de Programación II — UTEC.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════ NAVBAR ═══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__container">
+      <a href="#inicio" class="navbar__logo">
+        <span class="navbar__logo-bracket">[</span>SUPER_MARIO_XYZ<span class="navbar__logo-bracket">]</span>
+      </a>
+      <button class="navbar__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#inicio">~/inicio</a></li>
+        <li><a href="#acceso-rapido">~/acceso-rapido</a></li>
+        <li><a href="#demo">~/demo</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════ HERO ═══════════════════════════════════════════ -->
+  <section class="hero" id="inicio">
+    <div class="hero__particles" id="heroParticles"></div>
+    <div class="hero__container">
+      <span class="hero__badge">
+        <span class="hero__badge-dot"></span>
+        Programación II — UTEC | C++17 &amp; POO
+      </span>
+      <h1 class="hero__title">
+        <span class="hero__title-line">Super Mario Bros</span>
+        <span class="hero__title-accent">XYZ</span>
+      </h1>
+      <p class="hero__subtitle">
+        Motor de videojuegos en consola desarrollado en C++ mediante programación orientada a objetos,
+        polimorfismo, gestión dinámica de memoria (<code>int** matrizMundo</code>) y renderizado con
+        secuencias de escape ANSI.
+      </p>
+      <div class="hero__actions">
+        <a href="#acceso-rapido" class="btn btn--primary">
+          <span class="btn__icon">⚡</span> Acceso Rápido
+        </a>
+        <a href="#demo" class="btn btn--secondary">
+          <span class="btn__icon">▶</span> Ver Demo
+        </a>
+        <a id="heroGithubBtn" href="#" target="_blank" rel="noopener" class="btn btn--outline">
+          <span class="btn__icon">⌂</span> GitHub
+        </a>
+      </div>
+      <div class="hero__terminal">
+        <div class="hero__terminal-bar">
+          <span class="hero__terminal-dot hero__terminal-dot--red"></span>
+          <span class="hero__terminal-dot hero__terminal-dot--yellow"></span>
+          <span class="hero__terminal-dot hero__terminal-dot--green"></span>
+          <span class="hero__terminal-title">bash — super-mario-bros-xyz</span>
+        </div>
+        <pre class="hero__terminal-body"><code><span class="t-green">$</span> g++ -std=c++17 -o mario main.cpp Mundo.cpp Mario.cpp Goomba.cpp BloqueEstatico.cpp Entidad.cpp
+<span class="t-green">$</span> ./mario
+<span class="t-yellow">█</span> Loading Super Mario Bros XYZ...
+<span class="t-red">♥</span> Lives: 3  <span class="t-yellow">★</span> Score: 0  <span class="t-green">▸</span> World 1-1</code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ ACCESO RÁPIDO ═══════════════════════════════════════ -->
+  <section class="section" id="acceso-rapido">
+    <div class="section__container">
+      <div class="section__header">
+        <span class="section__tag">// recursos de sustentación</span>
+        <h2 class="section__title">Panel de Acceso Rápido</h2>
+        <p class="section__desc">5 accesos directos diseñados para abrir recursos instantáneamente durante la exposición en vivo.</p>
+      </div>
+
+      <div class="cards-grid">
+
+        <!-- TARJETA 1 — REPOSITORIO -->
+        <div class="card card--github">
+          <div class="card__header">
+            <span class="card__number">01</span>
+            <span class="card__icon">⌂</span>
+          </div>
+          <h3 class="card__title">Repositorio en GitHub</h3>
+          <p class="card__desc">Código fuente completo del proyecto con todos los módulos y archivos de compilación.</p>
+          <div class="card__files">
+            <span class="card__file-tag">Mundo.cpp</span>
+            <span class="card__file-tag">Entidad.h</span>
+            <span class="card__file-tag">Mario.cpp</span>
+            <span class="card__file-tag">Goomba.cpp</span>
+            <span class="card__file-tag">BloqueEstatico.cpp</span>
+            <span class="card__file-tag">Colores.h</span>
+            <span class="card__file-tag">Sprites.h</span>
+          </div>
+          <div class="card__actions">
+            <a id="cardGithubLink" href="#" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Abrir Repositorio</a>
+            <button class="btn btn--outline btn--sm" id="btnCopyCompile">
+              <span id="copyIcon">📋</span> Copiar Compilación
+            </button>
+          </div>
+          <div class="card__command" id="compileCmd">
+            <code>g++ -std=c++17 -o mario main.cpp Mundo.cpp Mario.cpp Goomba.cpp BloqueEstatico.cpp Entidad.cpp</code>
+          </div>
+        </div>
+
+        <!-- TARJETA 2 — INFORME -->
+        <div class="card card--report">
+          <div class="card__header">
+            <span class="card__number">02</span>
+            <span class="card__icon">📄</span>
+          </div>
+          <h3 class="card__title">Informe Técnico (PDF)</h3>
+          <p class="card__desc">Documento de sustentación con análisis de complejidad, diagramas y justificación de decisiones técnicas.</p>
+          <div class="card__actions">
+            <a id="cardInformeLink" href="#" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Abrir PDF</a>
+            <button class="btn btn--outline btn--sm" id="btnPreviewInforme">👁 Previsualizar</button>
+          </div>
+        </div>
+
+        <!-- TARJETA 3 — PRESENTACIÓN -->
+        <div class="card card--slides">
+          <div class="card__header">
+            <span class="card__number">03</span>
+            <span class="card__icon">📊</span>
+          </div>
+          <h3 class="card__title">Presentación (Slides)</h3>
+          <p class="card__desc">Slides de exposición con diagramas de flujo, fragmentos de código y capturas del proyecto.</p>
+          <div class="card__actions">
+            <a id="cardPresentacionLink" href="#" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Abrir Slides</a>
+            <button class="btn btn--outline btn--sm" id="btnPreviewPresentation">👁 Previsualizar</button>
+          </div>
+        </div>
+
+        <!-- TARJETA 4 — UML -->
+        <div class="card card--uml">
+          <div class="card__header">
+            <span class="card__number">04</span>
+            <span class="card__icon">🔷</span>
+          </div>
+          <h3 class="card__title">Diagrama UML de Clases</h3>
+          <p class="card__desc">Jerarquía polimórfica completa: herencia, composición y dependencias entre las clases del motor.</p>
+          <div class="card__actions">
+            <button class="btn btn--primary btn--sm" id="btnOpenUML">🔎 Ver Diagrama Completo</button>
+          </div>
+        </div>
+
+        <!-- TARJETA 5 — DEMO -->
+        <div class="card card--demo">
+          <div class="card__header">
+            <span class="card__number">05</span>
+            <span class="card__icon">🎮</span>
+          </div>
+          <h3 class="card__title">Demo del Juego en Consola</h3>
+          <p class="card__desc">Simulación interactiva del motor de renderizado ANSI. ¡Jugable directamente en el navegador!</p>
+          <div class="card__actions">
+            <a href="#demo" class="btn btn--primary btn--sm">▶ Jugar Demo</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ DEMO ═══════════════════════════════════════ -->
+  <section class="section" id="demo">
+    <div class="section__container">
+      <div class="section__header">
+        <span class="section__tag">// simulación interactiva</span>
+        <h2 class="section__title">Demo — Consola Web</h2>
+        <p class="section__desc">Réplica del renderizado ANSI de <code>matrizMundo</code>. Usa <kbd>A</kbd>/<kbd>D</kbd> para mover y <kbd>W</kbd>/<kbd>Espacio</kbd> para saltar.</p>
+      </div>
+
+      <div class="demo-wrapper">
+        <div class="demo-terminal">
+          <div class="demo-terminal__bar">
+            <span class="hero__terminal-dot hero__terminal-dot--red"></span>
+            <span class="hero__terminal-dot hero__terminal-dot--yellow"></span>
+            <span class="hero__terminal-dot hero__terminal-dot--green"></span>
+            <span class="demo-terminal__title">super-mario-xyz — Nivel 1-1</span>
+            <div class="demo-terminal__stats">
+              <span id="demoLives">♥ 3</span>
+              <span id="demoScore">★ 0</span>
+            </div>
+          </div>
+          <canvas id="gameCanvas" width="640" height="320"></canvas>
+          <div class="demo-controls">
+            <div class="demo-controls__keys">
+              <button class="demo-key" data-key="w">W</button>
+              <div class="demo-controls__row">
+                <button class="demo-key" data-key="a">A</button>
+                <button class="demo-key" data-key="s">S</button>
+                <button class="demo-key" data-key="d">D</button>
+              </div>
+            </div>
+            <div class="demo-controls__info">
+              <p><kbd>A</kbd> / <kbd>D</kbd> — Mover</p>
+              <p><kbd>W</kbd> / <kbd>Espacio</kbd> — Saltar</p>
+              <p><kbd>R</kbd> — Reiniciar</p>
+            </div>
+            <button class="btn btn--primary btn--sm" id="btnResetGame">↻ Reiniciar Nivel</button>
+          </div>
+        </div>
+
+        <div class="demo-video__actions" style="margin-top: 20px;">
+          <a id="cardDownloadCode" href="#" target="_blank" rel="noopener" class="btn btn--outline btn--sm">📥 Descargar Código Fuente</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__main">
+        <span class="footer__logo">[SUPER_MARIO_XYZ]</span>
+        <p class="footer__author">
+          Desarrollado por <strong>Sebastian Oswaldo Chipana Poma</strong>
+          (<a href="https://github.com/pyzco" target="_blank" rel="noopener">@pyzco</a>)
+        </p>
+        <p class="footer__uni">Ciencia de la Computación — UTEC</p>
+        <p class="footer__course">Programación II · 2026</p>
+      </div>
+      <div class="footer__bottom">
+        <span>Hecho con C++17, HTML5 y ☕</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════ MODALS ═══════════════════════════════════════ -->
+
+  <!-- Modal Previsualización PDF (Informe / Presentación) -->
+  <div class="modal" id="modalPDF" role="dialog" aria-modal="true" aria-label="Visor de documento">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__content modal__content--pdf">
+      <div class="modal__header">
+        <h3 class="modal__title" id="modalPDFTitle">Documento</h3>
+        <div class="modal__header-actions">
+          <a id="btnOpenPDFExternal" href="#" target="_blank" rel="noopener" class="btn btn--outline btn--sm" title="Abrir en pestaña nueva">
+            <span>↗ Abrir en pestaña</span>
+          </a>
+          <button class="modal__close" data-close-modal aria-label="Cerrar">&times;</button>
+        </div>
+      </div>
+      <div class="modal__body modal__body--pdf" id="modalPDFBody">
+        <div class="modal__placeholder">
+          <span class="modal__placeholder-icon">📄</span>
+          <p>Cargando documento...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal UML -->
+  <div class="modal" id="modalUML" role="dialog" aria-modal="true" aria-label="Diagrama UML">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__content modal__content--uml">
+      <div class="modal__header">
+        <div class="modal__title-group">
+          <h3 class="modal__title">Diagrama UML de Clases</h3>
+          <span class="modal__subtitle">Resolución nativa 2145×4305</span>
+        </div>
+        <div class="modal__zoom-controls">
+          <button class="btn btn--outline btn--sm" id="btnZoomOut" title="Reducir zoom">−</button>
+          <span id="zoomLevel" class="zoom-badge">100%</span>
+          <button class="btn btn--outline btn--sm" id="btnZoomIn" title="Aumentar zoom">+</button>
+          <button class="btn btn--outline btn--sm" id="btnZoomFitWidth" title="Ajustar al ancho de pantalla">Ajustar Ancho</button>
+          <button class="btn btn--outline btn--sm" id="btnZoomFit" title="Ajustar pantalla completa">Ver Todo</button>
+          <button class="btn btn--outline btn--sm" id="btnZoom100" title="Tamaño real 100%">100%</button>
+          <a id="btnOpenUMLExternal" href="uml.png" target="_blank" rel="noopener" class="btn btn--outline btn--sm" title="Abrir imagen original completa en pestaña nueva">
+            <span>↗ Original</span>
+          </a>
+          <button class="modal__close" data-close-modal aria-label="Cerrar">&times;</button>
+        </div>
+      </div>
+      <div class="modal__body modal__body--panzoom" id="modalUMLBody">
+        <div class="panzoom-viewport" id="panzoomViewport">
+          <div class="panzoom-layer" id="panzoomLayer">
+            <img id="umlImg" src="uml.png" alt="Diagrama UML de Clases" draggable="false">
+          </div>
+          <div class="panzoom-hint">
+            <span>🖱 Arrastra para mover · Rueda para zoom · Doble clic para ajustar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
