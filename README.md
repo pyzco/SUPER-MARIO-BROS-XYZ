@@ -18,6 +18,3 @@ El código está dividido en módulos independientes para separar la lógica del
 * **Colisiones en $O(1)$:** Se utiliza un mapa espacial (`std::unordered_map`) para indexar las entidades activas por coordenadas, evitando recorrer todo el arreglo de objetos en cada frame.
 * **Memoria Dinámica Explícita:** Tanto la grilla del nivel como las instancias polimórficas se asignan en el heap y se liberan manualmente al finalizar la ejecución para evitar fugas de memoria.
 * 
-## Requisitos y Compilación
-
-Necesitas un compilador compatible con **C++17** (GCC, Clang o MSVC) y **CMake** (3.10 o superior), además de una terminal con soporte para colores ANSI (Windows Terminal, Kitty, Alacritty, GNOME Terminal, etc.).
